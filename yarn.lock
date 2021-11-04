@@ -546,6 +546,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/engines@npm:3.4.0-27.1c9fdaa9e2319b814822d6dbfd0a69e1fcc13a85":
+  version: 3.4.0-27.1c9fdaa9e2319b814822d6dbfd0a69e1fcc13a85
+  resolution: "@prisma/engines@npm:3.4.0-27.1c9fdaa9e2319b814822d6dbfd0a69e1fcc13a85"
+  checksum: 097ccfaab4e09cd2fb2d7acd83faa88a9916c754d4289abb9d5c383dd49a8570ab9eb982c9d92ebcef8285a89e40c20bf807f973e1fe508f2ec16a7917ac3911
+  languageName: node
+  linkType: hard
+
 "@rushstack/eslint-patch@npm:^1.0.6":
   version: 1.0.9
   resolution: "@rushstack/eslint-patch@npm:1.0.9"
@@ -4726,6 +4733,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prisma@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "prisma@npm:3.4.0"
+  dependencies:
+    "@prisma/engines": 3.4.0-27.1c9fdaa9e2319b814822d6dbfd0a69e1fcc13a85
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: 78e7157e3ff00da2802826191c04604bea6c06c027da7a466120e83d3f97a2965ad6dd1e5b06a15f0bde42215317f009ac8b0ca4837b3ed29eb02e969caaa12a
+  languageName: node
+  linkType: hard
+
 "process-nextick-args@npm:~2.0.0":
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
@@ -6071,6 +6090,7 @@ __metadata:
     husky: ^7.0.4
     next: 12.0.2
     postcss: ^8.3.5
+    prisma: ^3.4.0
     react: 17.0.2
     react-dom: 17.0.2
     tailwindcss: ^2.2.4
