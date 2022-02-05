@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Form from '../components/Form';
+import FormInput from '../components/FormInput';
+import FormSelect from '../components/FormSelect';
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-auto w-full">
+      <main className="mx-auto w-full flex items-center flex-col">
         <h1 className="text-center mt-10 text-blue-500 font-bold text-3xl">
           URL Shortener
         </h1>
@@ -19,6 +22,16 @@ const Home: NextPage = () => {
           Get your url shortened for{' '}
           <span className="text-purple-500 font-bold">free!</span>
         </h2>
+
+        <Form onSubmit={(data) => console.log(data)}>
+          <FormInput label="Link" id="link" />
+          <FormInput label="Slug" id="slug" />
+          <FormSelect
+            label="Domain"
+            options={['url.midka.dev', 'sussy.link']}
+          />
+          <FormInput type="submit" />
+        </Form>
       </main>
     </div>
   );
