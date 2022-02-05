@@ -481,28 +481,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:^0.3.3":
-  version: 0.3.4
-  resolution: "@tailwindcss/forms@npm:0.3.4"
+"@tailwindcss/forms@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@tailwindcss/forms@npm:0.4.0"
   dependencies:
     mini-svg-data-uri: ^1.2.3
   peerDependencies:
-    tailwindcss: ">=2.0.0"
-  checksum: 4b2b2b3361169bf5adf1a575c7dc8bb7946192c0edf4829e5b1de342a4e1b8138a01441a8ecef70e0777180b0797506e3f44854f09a32b9d7083658271543783
+    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
+  checksum: 881a80b136f22b3da68323166ddfbcd844841f711d75ce4d64479302ae523ac7c1fe8a3bb57370216e6da69303640d70d543ecdb3ec2086f1ddf428a6c13566f
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "@tailwindcss/typography@npm:0.4.1"
+"@tailwindcss/typography@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "@tailwindcss/typography@npm:0.5.1"
   dependencies:
     lodash.castarray: ^4.4.0
     lodash.isplainobject: ^4.0.6
     lodash.merge: ^4.6.2
-    lodash.uniq: ^4.5.0
   peerDependencies:
-    tailwindcss: ">=2.0.0"
-  checksum: d234509964f59389d00ccc0529b033a5aa670a93149a48520cd2088d102b894cc746146052ea844a926bbea4b16904f5f6b2874399511bf78d55631bdb88ac68
+    tailwindcss: "*"
+  checksum: 894bab9a14a5bc4071573618ca9fd6b5bbe53e3c26af8aa1de440b8be59a63cf105f9fb1b12611bf446b4b054c6a48e8ff5c7c85ff233c5f78d70ffb7e53b5d9
   languageName: node
   linkType: hard
 
@@ -2867,13 +2866,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.uniq@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "lodash.uniq@npm:4.5.0"
-  checksum: a4779b57a8d0f3c441af13d9afe7ecff22dd1b8ce1129849f71d9bbc8e8ee4e46dfb4b7c28f7ad3d67481edd6e51126e4e2a6ee276e25906d10f7140187c392d
-  languageName: node
-  linkType: hard
-
 "lodash@npm:^4.17.15, lodash@npm:^4.17.19":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
@@ -4409,7 +4401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.18":
+"tailwindcss@npm:^3.0.17":
   version: 3.0.18
   resolution: "tailwindcss@npm:3.0.18"
   dependencies:
@@ -4739,8 +4731,8 @@ __metadata:
     "@commitlint/cli": ^14.1.0
     "@commitlint/config-conventional": ^14.1.0
     "@prisma/client": 3.4.0
-    "@tailwindcss/forms": ^0.3.3
-    "@tailwindcss/typography": ^0.4.1
+    "@tailwindcss/forms": ^0.4.0
+    "@tailwindcss/typography": ^0.5.1
     "@types/node": 16.11.6
     "@types/react": 17.0.34
     autoprefixer: ^10.4.2
@@ -4752,7 +4744,7 @@ __metadata:
     prisma: ^3.9.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    tailwindcss: ^3.0.18
+    tailwindcss: ^3.0.17
     ts-node: ^10.4.0
     typescript: ^4.5.5
   languageName: unknown

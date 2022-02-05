@@ -17,6 +17,7 @@ model User {
   updatedAt DateTime @updatedAt
   role      Role     @default(USER)
   links     Link[]
+  domains   Domain[]
 }
 
 enum Role {
@@ -30,6 +31,15 @@ model Link {
   updatedAt DateTime @updatedAt
   url       String   @unique
   slug      String   @unique
+  owner     User     @relation(fields: [ownerId], references: [id])
+  ownerId   String
+}
+
+model Domain {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  domain    String   @unique
   owner     User     @relation(fields: [ownerId], references: [id])
   ownerId   String
 }
