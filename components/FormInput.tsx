@@ -1,5 +1,5 @@
 import React, { FC, HTMLProps, InputHTMLAttributes } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, UseFormRegister } from 'react-hook-form';
 
 interface FormInputProps {
   label?: string;

@@ -6,6 +6,10 @@ import FormInput from '../components/FormInput';
 import FormSelect from '../components/FormSelect';
 
 const Home: NextPage = () => {
+  const handleSubmit = (data: any) => {
+    console.log('handleSubmit', data);
+  };
+
   return (
     <div className="">
       <Head>
@@ -23,11 +27,12 @@ const Home: NextPage = () => {
           <span className="text-purple-500 font-bold">free!</span>
         </h2>
 
-        <Form onSubmit={(data) => console.log(data)}>
+        <Form onSubmit={handleSubmit}>
           <FormInput label="Link" id="link" />
           <FormInput label="Slug" id="slug" />
           <FormSelect
             label="Domain"
+            id="domain"
             options={['url.midka.dev', 'sussy.link']}
           />
           <FormInput type="submit" />
