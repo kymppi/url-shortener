@@ -7,7 +7,6 @@ const main = async () => {
     data: {
       email: 'me@midka.dev',
       role: 'ADMIN',
-      discordId: '123456789',
     },
   });
 };
