@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Form from '../components/Form';
 import FormInput from '../components/FormInput';
 import FormSelect from '../components/FormSelect';
+import AddNewLink from '../forms/AddNewLink';
 
 const Home: NextPage = () => {
   const handleSubmit = (data: any) => {
@@ -27,16 +28,7 @@ const Home: NextPage = () => {
           <span className="text-purple-500 font-bold">free!</span>
         </h2>
 
-        <Form onSubmit={handleSubmit}>
-          <FormInput label="Link" id="link" />
-          <FormInput label="Slug" id="slug" />
-          <FormSelect
-            label="Domain"
-            id="domain"
-            options={['url.midka.dev', 'sussy.link']}
-          />
-          <FormInput type="submit" />
-        </Form>
+        <AddNewLink onSubmit={(data) => console.log(data)} />
       </main>
     </div>
   );

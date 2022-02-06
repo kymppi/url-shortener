@@ -1,11 +1,12 @@
 import React, { FC, HTMLProps, InputHTMLAttributes } from 'react';
-import { useForm, UseFormRegister } from 'react-hook-form';
+import { FieldValues, useForm, UseFormRegister } from 'react-hook-form';
 
 interface FormInputProps {
   label?: string;
   id?: string;
   inputProps?: HTMLProps<HTMLInputElement>;
   type?: InputHTMLAttributes<HTMLInputElement>['type'];
+  register?: UseFormRegister<FieldValues>;
 }
 
 const FormInput: FC<FormInputProps> = ({
@@ -13,9 +14,8 @@ const FormInput: FC<FormInputProps> = ({
   id,
   inputProps,
   type = 'text',
+  register,
 }) => {
-  const { register } = useForm();
-
   return (
     <div className="flex flex-col justify-center my-4 w-full max-w-xs">
       {label && (

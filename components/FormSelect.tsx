@@ -1,15 +1,14 @@
 import React, { FC } from 'react';
-import { useForm } from 'react-hook-form';
+import { FieldValues, useForm, UseFormRegister } from 'react-hook-form';
 
 interface FormSelectProps {
   label?: string;
   id: string;
   options: string[];
+  register: UseFormRegister<FieldValues>;
 }
 
-const FormSelect: FC<FormSelectProps> = ({ label, options, id }) => {
-  const { register } = useForm();
-
+const FormSelect: FC<FormSelectProps> = ({ label, options, id, register }) => {
   return (
     <div className="flex flex-col justify-center my-4 w-full max-w-xs">
       {label && (
