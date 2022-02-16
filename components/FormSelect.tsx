@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { motion } from 'framer-motion';
 import { FieldValues, useForm, UseFormRegister } from 'react-hook-form';
 
 interface FormSelectProps {
@@ -10,7 +11,10 @@ interface FormSelectProps {
 
 const FormSelect: FC<FormSelectProps> = ({ label, options, id, register }) => {
   return (
-    <div className="flex flex-col justify-center my-4 w-full max-w-xs">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="flex flex-col justify-center my-4 w-full max-w-xs"
+    >
       {label && (
         <label className="text-lg text-center text-black font-semibold">
           {label}
@@ -26,7 +30,7 @@ const FormSelect: FC<FormSelectProps> = ({ label, options, id, register }) => {
           </option>
         ))}
       </select>
-    </div>
+    </motion.div>
   );
 };
 

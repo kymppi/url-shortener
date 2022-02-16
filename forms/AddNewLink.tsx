@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Form from '../components/Form';
 import FormInput from '../components/FormInput';
@@ -9,12 +9,32 @@ interface AddNewLinkProps {
 }
 
 const AddNewLink: FC<AddNewLinkProps> = ({ onSubmit }) => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  useEffect(() => {
+    console.log(errors);
+  }, [errors]);
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <FormInput label="Link" id="link" register={register} />
-      <FormInput label="Slug" id="slug" register={register} />
+      <FormInput
+        label="Link"
+        id="link"
+        error={errors.link}
+        register={register}
+      />
+      <FormInput
+        label="Slug"
+        id="slug"
+        error={errors.slug}
+        validationRegex={/^\w{1,19}[^\+]$/}
+        validationError="Slug cannot end with a plus symbol"
+        register={register}
+      />
       <FormSelect
         label="Domain"
         id="domain"
